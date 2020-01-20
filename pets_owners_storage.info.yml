@@ -1,0 +1,5 @@
+name: pets_owners_storage
+type: module
+description: Module to learn how Drupal works with MySQL.
+core: 8.x
+package: Custom

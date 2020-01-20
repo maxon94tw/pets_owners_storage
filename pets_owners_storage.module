@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains pets_owners_storage.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function pets_owners_storage_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mydata module.
+    case 'help.page.pets_owners_storage':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This dispaly information what you enter your application.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function pets_owners_storage_theme() {
+  // We use a template file to allow for translation of blocks of content.
+  // Therefore we need to add this content at the theming layer.
+  return [
+    'pets_owners_storage_description' => [
+      'template' => 'description',
+      'variables' => [],
+    ],
+  ];
+}

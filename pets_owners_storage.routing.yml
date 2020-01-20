@@ -1,0 +1,36 @@
+
+pets_owners_storage.pets_owners_storage_controller_display:
+  path: '/pets_owners_storage'
+  defaults:
+    _controller: '\Drupal\pets_owners_storage\Controller\PetsOwnersStorageController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'
+
+pets_owners_storage.pets_owners_storage_form:
+  path: '/pets_owners_storage/form/pets_owners_storage'
+  defaults:
+    _form: '\Drupal\pets_owners_storage\Form\PetsOwnersStorageForm'
+    _title: 'PetsOwnersStorageForm'
+  requirements:
+    _access: 'TRUE'
+  
+
+pets_owners_storage.display_table_controller_display:
+  path: '/pets_owners_storage/hello/table'
+  defaults:
+    _controller: '\Drupal\pets_owners_storage\Controller\DisplayTableController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'
+
+
+
+pets_owners_storage.delete_form:
+  path: '/pets_owners_storage/form/delete/{cid}'
+  defaults:
+    _form: '\Drupal\pets_owners_storage\Form\DeleteForm'
+    _title: 'DeleteForm'
+  requirements:
+    _access: 'TRUE'
+  
